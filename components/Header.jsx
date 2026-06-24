@@ -24,6 +24,16 @@ export default function Header() {
     transition: "color 150ms",
   });
 
+  const mLink = {
+    fontSize: 16,
+    fontWeight: 500,
+    padding: "14px 12px",
+    color: "var(--text-primary)",
+    borderRadius: 8,
+    transition: "background 150ms",
+    display: "block",
+  };
+
   return (
     <header
       style={{
@@ -86,28 +96,52 @@ export default function Header() {
         </nav>
 
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <Link href="/signin" style={{ padding: "8px 20px", borderRadius: 9, border: "1.5px solid var(--border-green)", color: "var(--brand-green-dark)", fontSize: 14, fontWeight: 600, transition: "all 150ms" }}>Sign In</Link>
-          <Link href="/signup" style={{ padding: "8px 20px", borderRadius: 9, background: "linear-gradient(135deg,#16A34A,#22C55E)", color: "#fff", fontSize: 14, fontWeight: 600, boxShadow: "0 2px 8px rgba(22,163,74,0.25)" }}>Sign Up</Link>
-          <button onClick={() => setMobile(!mobile)} className="mobile-menu-btn" aria-label="Menu" style={{ display: "none", background: "transparent", border: "none", color: "var(--text-primary)", fontSize: 22 }}>
+          <Link href="/signin" className="desktop-cta" style={{ padding: "8px 20px", borderRadius: 9, border: "1.5px solid var(--border-green)", color: "var(--brand-green-dark)", fontSize: 14, fontWeight: 600, transition: "all 150ms" }}>Sign In</Link>
+          <Link href="/signup" className="desktop-cta" style={{ padding: "8px 20px", borderRadius: 9, background: "linear-gradient(135deg,#16A34A,#22C55E)", color: "#fff", fontSize: 14, fontWeight: 600, boxShadow: "0 2px 8px rgba(22,163,74,0.25)" }}>Sign Up</Link>
+          <button onClick={() => setMobile(!mobile)} className="mobile-menu-btn" aria-label="Menu" style={{ display: "none", background: "transparent", border: "none", color: "var(--text-primary)", fontSize: 24, cursor: "pointer", padding: 4 }}>
             <i className={`ti ${mobile ? "ti-x" : "ti-menu-2"}`} aria-hidden="true" />
           </button>
         </div>
       </div>
 
       {mobile && (
-        <div style={{ position: "fixed", top: 68, right: 0, bottom: 0, width: 280, background: "#fff", borderLeft: "1px solid var(--border-default)", padding: 24, display: "flex", flexDirection: "column", gap: 16, boxShadow: "var(--shadow-lg)" }}>
-          <Link href="/" onClick={() => setMobile(false)} style={{ fontSize: 16, padding: "12px 0", color: "var(--text-primary)" }}>Home</Link>
-          <Link href="/about" onClick={() => setMobile(false)} style={{ fontSize: 16, padding: "12px 0", color: "var(--text-primary)" }}>About Us</Link>
-          <Link href="/services" onClick={() => setMobile(false)} style={{ fontSize: 16, padding: "12px 0", color: "var(--text-primary)" }}>Services</Link>
-          <Link href="/contact" onClick={() => setMobile(false)} style={{ fontSize: 16, padding: "12px 0", color: "var(--text-primary)" }}>Contact Us</Link>
-          <Link href="/signin" onClick={() => setMobile(false)} style={{ marginTop: "auto", padding: "12px", borderRadius: 9, border: "1.5px solid var(--border-green)", color: "var(--brand-green-dark)", textAlign: "center", fontWeight: 600 }}>Sign In</Link>
-          <Link href="/signup" onClick={() => setMobile(false)} style={{ padding: "12px", borderRadius: 9, background: "linear-gradient(135deg,#16A34A,#22C55E)", color: "#fff", textAlign: "center", fontWeight: 600 }}>Sign Up</Link>
-        </div>
+        <>
+          <div onClick={() => setMobile(false)} style={{ position: "fixed", top: 68, left: 0, right: 0, bottom: 0, background: "rgba(15,27,36,0.5)", zIndex: 101 }} />
+          <aside style={{ position: "fixed", top: 68, right: 0, bottom: 0, width: "min(300px, 85vw)", background: "#FFFFFF", borderLeft: "1px solid var(--border-default)", padding: "20px 16px", display: "flex", flexDirection: "column", gap: 4, boxShadow: "-12px 0 40px rgba(15,27,36,0.18)", zIndex: 102, overflowY: "auto", animation: "drawerIn 240ms cubic-bezier(0.16,1,0.3,1)" }}>
+            {[
+              { href: "/", label: "Home", icon: "ti-home" },
+              { href: "/about", label: "About Us", icon: "ti-info-circle" },
+              { href: "/services", label: "Services", icon: "ti-list-details" },
+              { href: "/contact", label: "Contact Us", icon: "ti-mail" },
+            ].map((item) => {
+              const active = path === item.href;
+              return (
+                <Link key={item.href} href={item.href} onClick={() => setMobile(false)} style={{
+                  fontSize: 15, fontWeight: 600,
+                  padding: "14px 14px",
+                  color: active ? "var(--brand-green-dark)" : "var(--text-primary)",
+                  background: active ? "var(--brand-green-pale)" : "transparent",
+                  borderRadius: 10,
+                  display: "flex", alignItems: "center", gap: 12,
+                  transition: "background 150ms",
+                }}>
+                  <i className={`ti ${item.icon}`} style={{ fontSize: 18, color: active ? "var(--brand-green)" : "var(--text-muted)" }} aria-hidden="true" />
+                  {item.label}
+                </Link>
+              );
+            })}
+            <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: 10, paddingTop: 20, borderTop: "1px solid var(--border-default)" }}>
+              <Link href="/signin" onClick={() => setMobile(false)} style={{ padding: "13px", borderRadius: 10, border: "1.5px solid var(--border-green)", color: "var(--brand-green-dark)", textAlign: "center", fontWeight: 600, fontSize: 14 }}>Sign In</Link>
+              <Link href="/signup" onClick={() => setMobile(false)} style={{ padding: "13px", borderRadius: 10, background: "linear-gradient(135deg,#16A34A,#22C55E)", color: "#fff", textAlign: "center", fontWeight: 600, fontSize: 14, boxShadow: "0 4px 12px rgba(22,163,74,0.25)" }}>Sign Up</Link>
+            </div>
+          </aside>
+        </>
       )}
 
       <style jsx>{`
         @media (max-width: 900px) {
           .desktop-nav { display: none !important; }
+          .desktop-cta { display: none !important; }
           .mobile-menu-btn { display: inline-flex !important; }
         }
       `}</style>

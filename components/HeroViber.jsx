@@ -125,6 +125,15 @@ export default function HeroViber() {
           .hero-logo { height: 64px !important; }
         }
       `}</style>
+      <style jsx global>{`
+        @media (max-width: 900px) {
+          .hero-floats, .hero-floats .floating-card, .floating-card {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
