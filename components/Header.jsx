@@ -15,6 +15,17 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobile) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [mobile]);
+
   const linkStyle = (active) => ({
     fontSize: 14,
     fontWeight: 500,
@@ -96,9 +107,7 @@ export default function Header() {
         </nav>
 
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <Link href="/signin" className="desktop-cta" style={{ padding: "8px 20px", borderRadius: 9, border: "1.5px solid var(--border-green)", color: "var(--brand-green-dark)", fontSize: 14, fontWeight: 600, transition: "all 150ms" }}>Sign In</Link>
-          <Link href="/signup" className="desktop-cta" style={{ padding: "8px 20px", borderRadius: 9, background: "linear-gradient(135deg,#16A34A,#22C55E)", color: "#fff", fontSize: 14, fontWeight: 600, boxShadow: "0 2px 8px rgba(22,163,74,0.25)" }}>Sign Up</Link>
-          <button onClick={() => setMobile(!mobile)} className="mobile-menu-btn" aria-label="Menu" style={{ background: "transparent", border: "none", color: "var(--text-primary)", fontSize: 24, cursor: "pointer", padding: 4 }}>
+          <button onClick={() => setMobile(!mobile)} className="mobile-menu-btn" aria-label="Menu" style={{ background: "transparent", border: "none", color: "var(--text-primary)", fontSize: 24, cursor: "pointer", padding: 4, marginLeft: 8 }}>
             <i className={`ti ${mobile ? "ti-x" : "ti-menu-2"}`} aria-hidden="true" />
           </button>
         </div>
@@ -106,46 +115,40 @@ export default function Header() {
 
       {mobile && (
         <>
-          <div onClick={() => setMobile(false)} style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(15,27,36,0.55)", zIndex: 9998 }} />
-          <aside style={{ position: "fixed", top: 0, right: 0, bottom: 0, width: "min(300px, 85vw)", background: "#FFFFFF", borderLeft: "1px solid var(--border-default)", padding: "20px 16px", display: "flex", flexDirection: "column", gap: 4, boxShadow: "-12px 0 40px rgba(15,27,36,0.18)", zIndex: 9999, overflowY: "auto", animation: "drawerIn 240ms cubic-bezier(0.16,1,0.3,1)" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16, paddingBottom: 16, borderBottom: "1px solid var(--border-default)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <img src="/img/logo.jpeg" alt="Gatimaan" style={{ height: 32, borderRadius: 5 }} />
-                <span style={{ fontSize: 14, fontWeight: 700 }}>
-                  <span style={{ color: "var(--brand-navy)" }}>Gati</span><span style={{ color: "var(--brand-navy)" }}>Maan</span>
-                </span>
-              </div>
-              <button onClick={() => setMobile(false)} aria-label="Close menu" style={{ background: "transparent", border: "none", color: "var(--text-primary)", fontSize: 24, cursor: "pointer", padding: 4 }}>
-                <i className="ti ti-x" aria-hidden="true" />
-              </button>
+          <div onClick={() => setMobile(false)} style={{ position: "fixed", top: 68, left: 0, right: 0, bottom: 0, background: "rgba(0,0,0,0.5)", zIndex: 101, cursor: "pointer" }} aria-label="Close menu" />
+          <nav style={{ position: "fixed", top: 68, right: 0, width: 280, height: "calc(100vh - 68px)", background: "#ffffff", zIndex: 102, boxShadow: "-2px 0 12px rgba(0,0,0,0.15)", overflowY: "auto", display: "flex", flexDirection: "column", animation: "drawerIn 300ms cubic-bezier(0.16,1,0.3,1)" }}>
+            
+            {/* Navigation Links */}
+            <Link href="/" onClick={() => setMobile(false)} style={{ padding: "14px 16px", borderBottom: "1px solid #f0f0f0", color: "#000000", fontSize: 15, fontWeight: 600, textDecoration: "none", display: "flex", alignItems: "center", gap: 12, background: "#ffffff" }}>
+              <i className="ti ti-home" style={{ fontSize: 18, color: "var(--brand-green)" }} aria-hidden="true" />
+              Home
+            </Link>
+            
+            <Link href="/about" onClick={() => setMobile(false)} style={{ padding: "14px 16px", borderBottom: "1px solid #f0f0f0", color: "#000000", fontSize: 15, fontWeight: 600, textDecoration: "none", display: "flex", alignItems: "center", gap: 12, background: "#ffffff" }}>
+              <i className="ti ti-info-circle" style={{ fontSize: 18, color: "var(--brand-green)" }} aria-hidden="true" />
+              About Us
+            </Link>
+            
+            <Link href="/services" onClick={() => setMobile(false)} style={{ padding: "14px 16px", borderBottom: "1px solid #f0f0f0", color: "#000000", fontSize: 15, fontWeight: 600, textDecoration: "none", display: "flex", alignItems: "center", gap: 12, background: "#ffffff" }}>
+              <i className="ti ti-list-details" style={{ fontSize: 18, color: "var(--brand-green)" }} aria-hidden="true" />
+              Services
+            </Link>
+            
+            <Link href="/contact" onClick={() => setMobile(false)} style={{ padding: "14px 16px", borderBottom: "1px solid #f0f0f0", color: "#000000", fontSize: 15, fontWeight: 600, textDecoration: "none", display: "flex", alignItems: "center", gap: 12, background: "#ffffff" }}>
+              <i className="ti ti-mail" style={{ fontSize: 18, color: "var(--brand-green)" }} aria-hidden="true" />
+              Contact Us
+            </Link>
+
+            {/* Sign In & Sign Up Buttons */}
+            <div style={{ padding: "12px 12px", borderTop: "1px solid #e5e7eb", display: "flex", gap: 10, flexShrink: 0, marginTop: "auto" }}>
+              <Link href="/signin" onClick={() => setMobile(false)} style={{ flex: 1, padding: "14px 16px", borderRadius: 8, border: "1.5px solid var(--brand-green)", color: "var(--brand-green-dark)", fontSize: 14, fontWeight: 600, textAlign: "center", textDecoration: "none" }}>
+                Sign In
+              </Link>
+              <Link href="/signup" onClick={() => setMobile(false)} style={{ flex: 1, padding: "14px 16px", borderRadius: 8, background: "var(--brand-green)", color: "#fff", fontSize: 14, fontWeight: 600, textAlign: "center", textDecoration: "none" }}>
+                Sign Up
+              </Link>
             </div>
-            {[
-              { href: "/", label: "Home", icon: "ti-home" },
-              { href: "/about", label: "About Us", icon: "ti-info-circle" },
-              { href: "/services", label: "Services", icon: "ti-list-details" },
-              { href: "/contact", label: "Contact Us", icon: "ti-mail" },
-            ].map((item) => {
-              const active = path === item.href;
-              return (
-                <Link key={item.href} href={item.href} onClick={() => setMobile(false)} style={{
-                  fontSize: 15, fontWeight: 600,
-                  padding: "14px 14px",
-                  color: active ? "var(--brand-green-dark)" : "var(--text-primary)",
-                  background: active ? "var(--brand-green-pale)" : "transparent",
-                  borderRadius: 10,
-                  display: "flex", alignItems: "center", gap: 12,
-                  transition: "background 150ms",
-                }}>
-                  <i className={`ti ${item.icon}`} style={{ fontSize: 18, color: active ? "var(--brand-green)" : "var(--text-muted)" }} aria-hidden="true" />
-                  {item.label}
-                </Link>
-              );
-            })}
-            <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: 10, paddingTop: 20, borderTop: "1px solid var(--border-default)" }}>
-              <Link href="/signin" onClick={() => setMobile(false)} style={{ padding: "13px", borderRadius: 10, border: "1.5px solid var(--border-green)", color: "var(--brand-green-dark)", textAlign: "center", fontWeight: 600, fontSize: 14 }}>Sign In</Link>
-              <Link href="/signup" onClick={() => setMobile(false)} style={{ padding: "13px", borderRadius: 10, background: "linear-gradient(135deg,#16A34A,#22C55E)", color: "#fff", textAlign: "center", fontWeight: 600, fontSize: 14, boxShadow: "0 4px 12px rgba(22,163,74,0.25)" }}>Sign Up</Link>
-            </div>
-          </aside>
+          </nav>
         </>
       )}
 

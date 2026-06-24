@@ -287,7 +287,6 @@ button { font-family: inherit; cursor: pointer; }
 /* Header desktop/mobile toggle (global so it actually applies) */
 @media (max-width: 900px) {
   .desktop-nav { display: none !important; }
-  .desktop-cta { display: none !important; }
   .mobile-menu-btn { display: inline-flex !important; }
 }
 @media (min-width: 901px) {
