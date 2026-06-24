@@ -107,6 +107,8 @@ export default function Header() {
         </nav>
 
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          <Link href="/signin" className="desktop-cta" style={{ padding: "8px 20px", borderRadius: 9, border: "1.5px solid var(--border-green)", color: "var(--brand-green-dark)", fontSize: 14, fontWeight: 600, transition: "all 150ms" }}>Sign In</Link>
+          <Link href="/signup" className="desktop-cta" style={{ padding: "8px 20px", borderRadius: 9, background: "linear-gradient(135deg,#16A34A,#22C55E)", color: "#fff", fontSize: 14, fontWeight: 600, boxShadow: "0 2px 8px rgba(22,163,74,0.25)" }}>Sign Up</Link>
           <button onClick={() => setMobile(!mobile)} className="mobile-menu-btn" aria-label="Menu" style={{ background: "transparent", border: "none", color: "var(--text-primary)", fontSize: 24, cursor: "pointer", padding: 4, marginLeft: 8 }}>
             <i className={`ti ${mobile ? "ti-x" : "ti-menu-2"}`} aria-hidden="true" />
           </button>
