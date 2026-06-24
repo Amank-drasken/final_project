@@ -126,7 +126,7 @@ export default function HeroViber() {
         }
       `}</style>
       <style jsx global>{`
-        @media (max-width: 900px) {
+        @media (max-width: 1024px) {
           .hero-floats, .hero-floats .floating-card, .floating-card {
             display: none !important;
             visibility: hidden !important;

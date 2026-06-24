@@ -106,8 +106,19 @@ export default function Header() {
 
       {mobile && (
         <>
-          <div onClick={() => setMobile(false)} style={{ position: "fixed", top: 68, left: 0, right: 0, bottom: 0, background: "rgba(15,27,36,0.5)", zIndex: 101 }} />
-          <aside style={{ position: "fixed", top: 68, right: 0, bottom: 0, width: "min(300px, 85vw)", background: "#FFFFFF", borderLeft: "1px solid var(--border-default)", padding: "20px 16px", display: "flex", flexDirection: "column", gap: 4, boxShadow: "-12px 0 40px rgba(15,27,36,0.18)", zIndex: 102, overflowY: "auto", animation: "drawerIn 240ms cubic-bezier(0.16,1,0.3,1)" }}>
+          <div onClick={() => setMobile(false)} style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(15,27,36,0.55)", zIndex: 9998 }} />
+          <aside style={{ position: "fixed", top: 0, right: 0, bottom: 0, width: "min(300px, 85vw)", background: "#FFFFFF", borderLeft: "1px solid var(--border-default)", padding: "20px 16px", display: "flex", flexDirection: "column", gap: 4, boxShadow: "-12px 0 40px rgba(15,27,36,0.18)", zIndex: 9999, overflowY: "auto", animation: "drawerIn 240ms cubic-bezier(0.16,1,0.3,1)" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16, paddingBottom: 16, borderBottom: "1px solid var(--border-default)" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <img src="/img/logo.jpeg" alt="Gatimaan" style={{ height: 32, borderRadius: 5 }} />
+                <span style={{ fontSize: 14, fontWeight: 700 }}>
+                  <span style={{ color: "var(--brand-navy)" }}>Gati</span><span style={{ color: "var(--brand-navy)" }}>Maan</span>
+                </span>
+              </div>
+              <button onClick={() => setMobile(false)} aria-label="Close menu" style={{ background: "transparent", border: "none", color: "var(--text-primary)", fontSize: 24, cursor: "pointer", padding: 4 }}>
+                <i className="ti ti-x" aria-hidden="true" />
+              </button>
+            </div>
             {[
               { href: "/", label: "Home", icon: "ti-home" },
               { href: "/about", label: "About Us", icon: "ti-info-circle" },
@@ -138,13 +149,6 @@ export default function Header() {
         </>
       )}
 
-      <style jsx>{`
-        @media (max-width: 900px) {
-          .desktop-nav { display: none !important; }
-          .desktop-cta { display: none !important; }
-          .mobile-menu-btn { display: inline-flex !important; }
-        }
-      `}</style>
     </header>
   );
 }
