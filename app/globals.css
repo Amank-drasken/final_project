@@ -36,9 +36,9 @@ button { font-family: inherit; cursor: pointer; }
 
 .gradient-text { background: linear-gradient(135deg, #16A34A, #06B6D4); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
 
-.brand-text .gati { color: var(--brand-navy); font-weight: 600; }
-.brand-text .maan { color: var(--brand-green); font-weight: 600; }
-.brand-text .payments { color: var(--text-muted); font-weight: 500; }
+.brand-text .gati { color: var(--brand-navy); font-weight: 700; }
+.brand-text .maan { color: var(--brand-navy); font-weight: 700; }
+.brand-text .payments { color: var(--brand-green-mid); font-weight: 600; }
 
 .btn-primary {
   background: linear-gradient(135deg, #16A34A, #22C55E);

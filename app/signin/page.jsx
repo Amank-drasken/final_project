@@ -36,14 +36,14 @@ export default function SignInPage() {
         </div>
 
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10, color: "#fff", zIndex: 2 }}>
-          <img src="/img/logo.jpeg" alt="Gatimaan" style={{ height: 40, borderRadius: 7 }} />
-          <span style={{ fontSize: 16, fontWeight: 600 }}>
-            <span style={{ color: "#fff" }}>Gati</span><span style={{ color: "#4ADE80" }}>Maan</span><span style={{ color: "rgba(255,255,255,0.4)" }}> Payments</span>
+          <img src="/img/logo.jpeg" alt="Gatimaan" style={{ height: 48, borderRadius: 7 }} />
+          <span style={{ fontSize: 16, fontWeight: 700 }}>
+            <span style={{ color: "#fff" }}>Gati</span><span style={{ color: "#fff" }}>Maan</span><span style={{ color: "#4ADE80", fontWeight: 600 }}> Payments</span>
           </span>
         </Link>
 
         <div style={{ margin: "auto 0", position: "relative", zIndex: 2, maxWidth: 380 }}>
-          <h2 style={{ fontSize: 30, fontWeight: 800, marginBottom: 8 }}>Welcome back</h2>
+          <h2 style={{ fontSize: 30, fontWeight: 800, marginBottom: 8 }}>Welcome Back</h2>
           <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 14, marginBottom: 28 }}>Sign in to continue managing your operations</p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 24 }}>
@@ -76,7 +76,7 @@ export default function SignInPage() {
 
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: 40, background: "#fff" }} className="auth-right">
         <div style={{ width: "100%", maxWidth: 400 }}>
-          <h1 style={{ fontSize: 28, fontWeight: 800, margin: "0 0 6px", color: "var(--text-primary)" }}>Welcome back</h1>
+          <h1 style={{ fontSize: 28, fontWeight: 800, margin: "0 0 6px", color: "var(--text-primary)" }}>Welcome Back</h1>
           <p style={{ color: "var(--text-muted)", fontSize: 14, marginBottom: 28 }}>Sign in to your Gatimaan Payments account</p>
           <form onSubmit={submit} noValidate>
             <div style={{ marginBottom: 16 }}>

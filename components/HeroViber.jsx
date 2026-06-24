@@ -73,29 +73,30 @@ export default function HeroViber() {
 
       {/* Center content */}
       <div style={{ position: "relative", maxWidth: 720, margin: "0 auto", zIndex: 2 }}>
-        <div className="fade-up" style={{ fontSize: 13, fontWeight: 500, color: "var(--text-muted)", marginBottom: 20, letterSpacing: 0.3 }}>
-          For utility payment businesses <span style={{ color: "var(--brand-green)" }}>·</span> Distributors <span style={{ color: "var(--brand-green)" }}>·</span> Retailer networks
+        <img className="fade-up hero-logo" src="/img/logo.jpeg" alt="Gatimaan Payments" style={{ height: 80, width: "auto", borderRadius: 10, margin: "0 auto 12px", display: "block", boxShadow: "0 0 0 0 rgba(34,197,94,0.4)", animation: "logoEntry 600ms cubic-bezier(0.34,1.56,0.64,1) both, logoFlash 1200ms ease-out 600ms both" }} />
+        <div className="fade-up" style={{ fontSize: 28, fontWeight: 800, letterSpacing: 0.5, marginBottom: 16, animationDelay: ".08s" }}>
+          <span style={{ color: "var(--brand-navy)" }}>Gati</span><span style={{ color: "var(--brand-green-mid)" }}>Maan</span>
         </div>
-        <div className="badge-pill fade-up" style={{ marginBottom: 22, animationDelay: ".05s" }}>
+        <div className="badge-pill fade-up" style={{ marginBottom: 20, animationDelay: ".16s" }}>
           <span className="dot" />
           <span>UTILITY BILLING &amp; OPERATIONS PLATFORM</span>
         </div>
-        <h1 className="fade-up" style={{ fontSize: "clamp(34px, 6vw, 64px)", fontWeight: 800, lineHeight: 1.08, margin: "0 0 20px", animationDelay: ".15s", color: "var(--text-primary)", letterSpacing: "-0.02em" }}>
-          One platform to manage <span className="gradient-text">all utility operations</span>
+        <h1 className="fade-up" style={{ fontSize: "clamp(34px, 6vw, 64px)", fontWeight: 800, lineHeight: 1.08, margin: "0 0 12px", animationDelay: ".24s", color: "var(--text-primary)", letterSpacing: "-0.02em" }}>
+          One Platform To Manage <span className="gradient-text">All Utility Operations</span>
         </h1>
-        <p className="fade-up" style={{ fontSize: 16, fontWeight: 600, color: "var(--brand-green-dark)", maxWidth: 560, margin: "0 auto 16px", borderBottom: "2px solid rgba(22,163,74,0.3)", paddingBottom: 6, display: "inline-block", animationDelay: ".25s" }}>
-          India's first B2B &amp; B2B2C platform guaranteeing rewards &amp; commission on every transaction
+        <p className="fade-up" style={{ fontSize: 16, fontWeight: 600, color: "var(--brand-green-dark)", maxWidth: 580, margin: "0 auto 16px", borderBottom: "2px solid rgba(22,163,74,0.3)", paddingBottom: 6, display: "inline-block", animationDelay: ".32s" }}>
+          India's First B2B &amp; B2B2C Platform Guaranteeing Rewards &amp; Commission On Every Transaction
         </p>
-        <p className="fade-up" style={{ color: "var(--text-secondary)", fontSize: 16, lineHeight: 1.7, maxWidth: 500, margin: "16px auto 28px", animationDelay: ".32s" }}>
+        <p className="fade-up" style={{ color: "var(--text-secondary)", fontSize: 16, lineHeight: 1.7, maxWidth: 500, margin: "16px auto 24px", animationDelay: ".4s" }}>
           Fetch bills, manage wallets, auto-calculate commissions and settle payments for your retailer network — all from one dashboard.
         </p>
-        <div className="fade-up" style={{ display: "flex", gap: 20, justifyContent: "center", alignItems: "center", marginBottom: 44, animationDelay: ".4s", flexWrap: "wrap" }}>
+        <div className="fade-up" style={{ display: "flex", gap: 20, justifyContent: "center", alignItems: "center", marginBottom: 36, animationDelay: ".48s", flexWrap: "wrap" }}>
           <Link href="/signup" className="btn-primary">Get Started Free</Link>
           <Link href="/contact" style={{ color: "var(--brand-green)", fontSize: 15, fontWeight: 500, display: "inline-flex", alignItems: "center", gap: 4 }}>
-            Book a demo <i className="ti ti-chevron-right" aria-hidden="true" />
+            Book A Demo <i className="ti ti-chevron-right" aria-hidden="true" />
           </Link>
         </div>
-        <div className="fade-up" style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 36, flexWrap: "wrap", animationDelay: ".5s" }}>
+        <div className="fade-up" style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 36, flexWrap: "wrap", animationDelay: ".56s" }}>
           {[["50+","Utility Providers"],["5","User Roles"],["99.8%","Settlement Rate"],["₹2Cr+","Monthly Processed"]].map(([n,l],i) => (
             <div key={l} style={{ display: "flex", alignItems: "center", gap: 36 }}>
               {i > 0 && <div style={{ width: 1, height: 36, background: "var(--border-default)" }} />}
@@ -107,6 +108,14 @@ export default function HeroViber() {
           ))}
         </div>
       </div>
+      <style jsx>{`
+        @keyframes logoEntry { 0% { opacity: 0; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1); } }
+        @keyframes logoFlash {
+          0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
+          60% { box-shadow: 0 0 0 16px rgba(34,197,94,0); }
+          100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+        }
+      `}</style>
     </section>
   );
 }

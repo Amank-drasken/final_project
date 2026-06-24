@@ -8,11 +8,11 @@ export default function Footer() {
         <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", gap: 40 }} className="footer-grid">
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
-              <img src="/img/logo.jpeg" alt="Gatimaan Payments" style={{ height: 36, width: "auto", borderRadius: 6 }} />
-              <span style={{ fontSize: 16, fontWeight: 600 }}>
+              <img src="/img/logo.jpeg" alt="Gatimaan Payments" style={{ height: 48, width: "auto", borderRadius: 6 }} />
+              <span style={{ fontSize: 16, fontWeight: 700 }}>
                 <span style={{ color: "#fff" }}>Gati</span>
-                <span style={{ color: "#4ADE80" }}>Maan</span>
-                <span style={{ color: "rgba(255,255,255,0.4)" }}> Payments</span>
+                <span style={{ color: "#fff" }}>Maan</span>
+                <span style={{ color: "#4ADE80", fontWeight: 600 }}> Payments</span>
               </span>
             </div>
             <p style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", fontStyle: "italic", margin: "0 0 6px" }}>Swift. Secure. Simple. Your Bills, Paid.</p>

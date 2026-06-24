@@ -60,7 +60,7 @@ export default function ContactPage() {
           </div>
           <div style={{ position: "relative", maxWidth: 560, margin: "0 auto" }}>
             <div className="badge-pill fade-up" style={{ marginBottom: 22 }}><span className="dot" />GET IN TOUCH</div>
-            <h1 className="fade-up" style={{ fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 800, marginBottom: 18, animationDelay: ".1s", color: "var(--text-primary)" }}>We'd love to hear from you</h1>
+            <h1 className="fade-up" style={{ fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 800, marginBottom: 18, animationDelay: ".1s", color: "var(--text-primary)" }}>We'd Love To Hear From You</h1>
             <p className="fade-up" style={{ color: "var(--text-secondary)", fontSize: 17, lineHeight: 1.65, maxWidth: 500, margin: "0 auto", animationDelay: ".2s" }}>Reach out for demos, partnerships, billing support, or anything else — we respond within 24 hours.</p>
           </div>
         </section>
@@ -68,7 +68,7 @@ export default function ContactPage() {
         <section className="section" style={{ background: "var(--bg-section-alt)" }}>
           <div className="container contact-grid" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 28, alignItems: "start", maxWidth: 1140 }}>
             <div data-animate="left" className="card-hoverable" style={{ background: "#fff", border: "1px solid var(--border-default)", borderRadius: 20, padding: 36, boxShadow: "var(--shadow-md)" }}>
-              <h3 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, color: "var(--text-primary)" }}>Send us a message</h3>
+              <h3 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, color: "var(--text-primary)" }}>Send Us A Message</h3>
               <p style={{ color: "var(--text-muted)", fontSize: 14, marginBottom: 24 }}>Fill in the details below and we'll get back to you.</p>
               {sent ? (
                 <div style={{ textAlign: "center", padding: 40 }}>
@@ -118,7 +118,7 @@ export default function ContactPage() {
 
         <section className="section" style={{ background: "var(--bg-page)" }}>
           <div className="container" style={{ maxWidth: 760 }}>
-            <h2 data-animate="up" className="sec-h" style={{ textAlign: "center", marginBottom: 40 }}>Frequently asked questions</h2>
+            <h2 data-animate="up" className="sec-h" style={{ textAlign: "center", marginBottom: 40 }}>Frequently Asked Questions</h2>
             <div data-stagger>
               {faqs.map(([q, a], i) => (
                 <div key={i} style={{ background: "#fff", border: `1px solid ${openFaq === i ? "var(--border-green)" : "var(--border-default)"}`, borderRadius: 12, padding: "16px 20px", marginBottom: 10, transition: "all 200ms ease" }}>

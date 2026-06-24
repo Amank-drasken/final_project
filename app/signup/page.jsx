@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function SignUpPage() {
-  const [form, setForm] = useState({ first: "", last: "", business: "", email: "", phone: "", password: "", confirm: "" });
+  const [form, setForm] = useState({ first: "", last: "", email: "", phone: "", password: "" });
   const [show, setShow] = useState(false);
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
@@ -17,9 +17,8 @@ export default function SignUpPage() {
   const submit = (e) => {
     e.preventDefault();
     const errs = {};
-    ["first","last","business","email","phone","password","confirm"].forEach((k) => { if (!form[k]) errs[k] = "Required"; });
+    ["first","last","email","phone","password"].forEach((k) => { if (!form[k]) errs[k] = "Required"; });
     if (form.email && !/^\S+@\S+\.\S+$/.test(form.email)) errs.email = "Valid email required";
-    if (form.password && form.confirm && form.password !== form.confirm) errs.confirm = "Passwords do not match";
     setErrors(errs);
     if (Object.keys(errs).length === 0) {
       setLoading(true);
@@ -41,14 +40,14 @@ export default function SignUpPage() {
         </div>
 
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10, color: "#fff", zIndex: 2 }}>
-          <img src="/img/logo.jpeg" alt="Gatimaan" style={{ height: 40, borderRadius: 7 }} />
-          <span style={{ fontSize: 16, fontWeight: 600 }}>
-            <span style={{ color: "#fff" }}>Gati</span><span style={{ color: "#4ADE80" }}>Maan</span><span style={{ color: "rgba(255,255,255,0.4)" }}> Payments</span>
+          <img src="/img/logo.jpeg" alt="Gatimaan" style={{ height: 48, borderRadius: 7 }} />
+          <span style={{ fontSize: 16, fontWeight: 700 }}>
+            <span style={{ color: "#fff" }}>Gati</span><span style={{ color: "#fff" }}>Maan</span><span style={{ color: "#4ADE80", fontWeight: 600 }}> Payments</span>
           </span>
         </Link>
 
         <div style={{ margin: "auto 0", position: "relative", zIndex: 2, maxWidth: 380 }}>
-          <h2 style={{ fontSize: 28, fontWeight: 800, marginBottom: 8 }}>Start managing your utility business today</h2>
+          <h2 style={{ fontSize: 28, fontWeight: 800, marginBottom: 8 }}>Start Managing Your Utility Business Today</h2>
           <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 14, marginBottom: 24 }}>Everything you need in one platform</p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 22 }}>
@@ -75,14 +74,13 @@ export default function SignUpPage() {
 
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "40px 40px 60px", background: "#fff" }} className="auth-right">
         <div style={{ width: "100%", maxWidth: 440 }}>
-          <h1 style={{ fontSize: 28, fontWeight: 800, margin: "0 0 6px", color: "var(--text-primary)" }}>Create your account</h1>
+          <h1 style={{ fontSize: 28, fontWeight: 800, margin: "0 0 6px", color: "var(--text-primary)" }}>Create Your Account</h1>
           <p style={{ color: "var(--text-muted)", fontSize: 14, marginBottom: 24 }}>Start managing your utility payment business</p>
           <form onSubmit={submit} noValidate>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 14 }}>
               <Field label="First Name" value={form.first} onChange={h("first")} err={errors.first} />
               <Field label="Last Name" value={form.last} onChange={h("last")} err={errors.last} />
             </div>
-            <Field label="Business Name" value={form.business} onChange={h("business")} err={errors.business} />
             <Field label="Email Address" type="email" value={form.email} onChange={h("email")} err={errors.email} />
             <div style={{ marginBottom: 14 }}>
               <label className="label">Phone Number</label>
@@ -92,7 +90,7 @@ export default function SignUpPage() {
               </div>
               {errors.phone && <div style={errStyle}>{errors.phone}</div>}
             </div>
-            <div style={{ marginBottom: 8 }}>
+            <div style={{ marginBottom: 14 }}>
               <label className="label">Password</label>
               <div style={{ position: "relative" }}>
                 <input className="input" type={show ? "text" : "password"} value={form.password} onChange={h("password")} style={errors.password ? { borderColor: "var(--accent-red)" } : {}} />
@@ -110,11 +108,10 @@ export default function SignUpPage() {
               )}
               {errors.password && <div style={errStyle}>{errors.password}</div>}
             </div>
-            <Field label="Confirm Password" type="password" value={form.confirm} onChange={h("confirm")} err={errors.confirm} />
-            <p style={{ fontSize: 12, color: "var(--text-muted)", margin: "14px 0 18px", lineHeight: 1.5 }}>
+            <p style={{ fontSize: 12, color: "var(--text-muted)", margin: "0 0 18px", lineHeight: 1.5 }}>
               By signing up, you agree to our <Link href="#" style={{ color: "var(--brand-green)", fontWeight: 500 }}>Terms of Service</Link> and <Link href="#" style={{ color: "var(--brand-green)", fontWeight: 500 }}>Privacy Policy</Link>
             </p>
-            <button type="submit" disabled={loading} className="btn-primary" style={{ width: "100%", padding: 14, fontSize: 15 }}>{loading ? "Creating..." : "Create Account"}</button>
+            <button type="submit" disabled={loading} className="btn-primary" style={{ width: "100%", padding: 14, fontSize: 15 }}>{loading ? "Signing up..." : "Sign Up"}</button>
             <p style={{ textAlign: "center", marginTop: 22, fontSize: 14, color: "var(--text-muted)" }}>
               Already have an account? <Link href="/signin" style={{ color: "var(--brand-green)", fontWeight: 600 }}>Sign in →</Link>
             </p>

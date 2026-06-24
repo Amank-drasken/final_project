@@ -81,7 +81,7 @@ export default function HomePage() {
             </div>
             <div data-animate="right">
               <div className="eyebrow">BILL MANAGEMENT</div>
-              <h2 className="sec-h">Auto-fetch bills from every provider, instantly</h2>
+              <h2 className="sec-h">Auto-Fetch Bills From Every Provider, Instantly</h2>
               <p style={{ color: "var(--text-secondary)", fontSize: 16, lineHeight: 1.7 }}>Connect Gatimaan Payments once to 50+ utility providers — electricity, water, gas, telecom, broadband, DTH. Bills appear in your dashboard automatically. No more portal-hopping. No more manual entry.</p>
               <div style={{ marginTop: 20 }}>
                 <span className="feature-pill">50+ Providers</span>
@@ -97,7 +97,7 @@ export default function HomePage() {
           <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 60, alignItems: "center" }}>
             <div data-animate="left">
               <div className="eyebrow" style={{ color: "var(--accent-cyan)" }}>GMPAY WALLET</div>
-              <h2 className="sec-h">Instant wallet-to-wallet transfers with GMPay</h2>
+              <h2 className="sec-h">Instant Wallet-To-Wallet Transfers With GMPay</h2>
               <p style={{ color: "var(--text-secondary)", fontSize: 16, lineHeight: 1.7 }}>Every retailer and customer on the platform gets a GMPay wallet. Transfer funds instantly across your network, handle credit requests, manage fund additions, and pull back when needed. Every single movement is logged with a full audit trail — no disputes, no confusion.</p>
               <div style={{ marginTop: 20 }}>
                 <span className="feature-pill">Instant transfers</span>
@@ -147,7 +147,7 @@ export default function HomePage() {
             <i className="ti ti-trophy" style={{ color: "var(--accent-amber)", fontSize: 36, marginBottom: 14 }} aria-hidden="true" />
             <div style={{ display: "inline-block", background: "#14532D", color: "#fff", padding: "5px 14px", borderRadius: 20, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, marginBottom: 18 }}>INDIA'S FIRST</div>
             <h2 style={{ fontSize: "clamp(30px, 5vw, 48px)", fontWeight: 800, color: "var(--text-primary)", margin: "0 0 12px", lineHeight: 1.1 }}>India's First B2B &amp; B2B2C Utility Platform</h2>
-            <p style={{ fontSize: 22, fontWeight: 500, color: "var(--brand-green-dark)", margin: "0 0 24px" }}>Guaranteeing rewards &amp; commission on every transaction</p>
+            <p style={{ fontSize: 22, fontWeight: 500, color: "var(--brand-green-dark)", margin: "0 0 24px" }}>Guaranteeing Rewards &amp; Commission On Every Transaction</p>
             <p style={{ fontSize: 17, color: "var(--text-secondary)", lineHeight: 1.6, maxWidth: 580, margin: "0 auto 36px" }}>While other platforms simply process bills, Gatimaan Payments pays your retailer network on every transaction — automatically. Configurable commission rules, loyalty rewards, and milestone bonuses keep your partners engaged and your network growing.</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14, maxWidth: 880, margin: "0 auto" }} className="if-pills">
               {[
@@ -195,7 +195,7 @@ export default function HomePage() {
             </div>
             <div data-animate="right">
               <div className="eyebrow" style={{ color: "var(--accent-amber)" }}>RETAILER EARNINGS</div>
-              <h2 className="sec-h">Retailers earn on every single transaction</h2>
+              <h2 className="sec-h">Retailers Earn On Every Single Transaction</h2>
               <p style={{ color: "var(--text-secondary)", fontSize: 16, lineHeight: 1.7 }}>Configure commission percentages by transaction type. Every eligible sale automatically calculates and credits commission to the retailer's GMPay wallet. Reward programs, loyalty milestones, and coupon campaigns keep your network engaged and growing.</p>
             </div>
           </div>
@@ -205,7 +205,7 @@ export default function HomePage() {
         <section className="section" id="dashboard" style={{ background: "var(--bg-page)" }}>
           <div className="container">
             <div data-animate="up" style={{ textAlign: "center", marginBottom: 48 }}>
-              <h2 className="sec-h">Your real-time operations command center</h2>
+              <h2 className="sec-h">Your Real-Time Operations Command Center</h2>
               <p style={{ color: "var(--text-secondary)", fontSize: 17, maxWidth: 520, margin: "0 auto" }}>Everything your team needs — from treasury to retailer commissions — visible and controllable in one place.</p>
             </div>
             <div data-animate="scale" style={{ maxWidth: 860, margin: "0 auto", borderRadius: 14, overflow: "hidden", border: "1px solid var(--border-default)", boxShadow: "0 24px 80px rgba(22,163,74,0.12), 0 8px 24px rgba(0,0,0,0.08)" }}>
@@ -274,7 +274,7 @@ export default function HomePage() {
         <section className="section" style={{ background: "var(--bg-section-alt)" }}>
           <div className="container">
             <div data-animate="up" style={{ textAlign: "center", marginBottom: 48 }}>
-              <h2 className="sec-h">One platform, every team member covered</h2>
+              <h2 className="sec-h">One Platform, Every Team Member Covered</h2>
               <p style={{ color: "var(--text-secondary)", fontSize: 17, maxWidth: 560, margin: "0 auto" }}>Each role sees exactly what they need — nothing more, nothing less.</p>
             </div>
             <div data-stagger style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 18 }} className="role-grid">
@@ -307,7 +307,7 @@ export default function HomePage() {
         {/* COMPARISON */}
         <section className="section" style={{ background: "var(--bg-page)" }}>
           <div className="container">
-            <h2 data-animate="up" className="sec-h" style={{ textAlign: "center", marginBottom: 48 }}>What changes when you switch to Gatimaan Payments</h2>
+            <h2 data-animate="up" className="sec-h" style={{ textAlign: "center", marginBottom: 48 }}>What Changes When You Switch To Gatimaan Payments</h2>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }} className="cmp-grid">
               <div data-animate="left" className="card-hoverable" style={{ background: "#fff", border: "1px solid rgba(239,68,68,0.2)", borderRadius: 14, overflow: "hidden" }}>
                 <div style={{ padding: 18, background: "#fff", borderBottom: "1px solid rgba(239,68,68,0.15)", color: "#EF4444", fontWeight: 600, fontSize: 15 }}>✗ Without Gatimaan</div>
@@ -339,7 +339,7 @@ export default function HomePage() {
         {/* HOW IT WORKS */}
         <section className="section" style={{ background: "var(--bg-section-alt)" }}>
           <div className="container">
-            <h2 data-animate="up" className="sec-h" style={{ textAlign: "center", marginBottom: 64 }}>Up and running in 3 simple steps</h2>
+            <h2 data-animate="up" className="sec-h" style={{ textAlign: "center", marginBottom: 64 }}>Up And Running In 3 Simple Steps</h2>
             <div data-stagger style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24, position: "relative" }} className="steps-grid">
               <div className="timeline-line" style={{ position: "absolute", top: 30, left: "16%", right: "16%" }} />
               {[
@@ -369,7 +369,7 @@ export default function HomePage() {
           </div>
           <div data-animate="scale" style={{ position: "relative", maxWidth: 620, margin: "0 auto" }}>
             <div style={{ display: "inline-block", background: "rgba(74,222,128,0.12)", color: "#4ADE80", padding: "5px 16px", borderRadius: 20, fontSize: 11, fontWeight: 700, letterSpacing: 1.2, marginBottom: 20 }}>GET STARTED TODAY</div>
-            <h2 style={{ fontSize: "clamp(30px, 5vw, 44px)", fontWeight: 800, lineHeight: 1.15, marginBottom: 18, color: "#fff" }}>Ready to run your utility business from one place?</h2>
+            <h2 style={{ fontSize: "clamp(30px, 5vw, 44px)", fontWeight: 800, lineHeight: 1.15, marginBottom: 18, color: "#fff" }}>Ready To Run Your Utility Business From One Place?</h2>
             <p style={{ color: "rgba(255,255,255,0.55)", fontSize: 16, marginBottom: 32 }}>Join 200+ retailers and businesses already managing bills, wallets, commissions, and settlements on Gatimaan Payments.</p>
             <Link href="/signup" className="btn-primary" style={{ padding: "16px 48px", fontSize: 16 }}>Get Started Free</Link>
             <div style={{ color: "rgba(255,255,255,0.35)", fontSize: 13, marginTop: 18 }}>No credit card required · Setup in under 10 minutes · Cancel anytime</div>

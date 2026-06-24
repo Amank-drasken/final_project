@@ -8,7 +8,7 @@ export default function AppDownload() {
       <div className="container" style={{ position: "relative", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }}>
         <div data-animate="left">
           <div style={{ color: "#4ADE80", fontSize: 12, fontWeight: 700, letterSpacing: 1, marginBottom: 12 }}>AVAILABLE ON MOBILE</div>
-          <h2 style={{ fontSize: 36, fontWeight: 700, lineHeight: 1.2, margin: "0 0 16px" }}>Manage your operations on the go</h2>
+          <h2 style={{ fontSize: 36, fontWeight: 700, lineHeight: 1.2, margin: "0 0 16px" }}>Manage Your Operations On The Go</h2>
           <p style={{ fontSize: 15, color: "rgba(255,255,255,0.55)", lineHeight: 1.65, marginBottom: 28 }}>Access bills, wallets, commissions, and retailer data from anywhere. GMPay mobile brings the full platform to your pocket.</p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
             <a href="#" style={storeBtn}><i className="ti ti-brand-apple" style={{ fontSize: 22 }} /> <div style={{ textAlign: "left" }}><div style={{ fontSize: 10, opacity: 0.6 }}>Download on the</div><div style={{ fontSize: 14, fontWeight: 600 }}>App Store</div></div></a>

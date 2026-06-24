@@ -28,7 +28,7 @@ export default function ServicesPage() {
           </div>
           <div style={{ position: "relative", maxWidth: 620, margin: "0 auto" }}>
             <div className="badge-pill fade-up" style={{ marginBottom: 22 }}><span className="dot" />BILL PAYMENTS</div>
-            <h1 className="fade-up" style={{ fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 800, lineHeight: 1.1, marginBottom: 18, animationDelay: ".1s", color: "var(--text-primary)" }}>Automatic utility bill fetching &amp; management</h1>
+            <h1 className="fade-up" style={{ fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 800, lineHeight: 1.1, marginBottom: 18, animationDelay: ".1s", color: "var(--text-primary)" }}>Automatic Utility Bill Fetching &amp; Management</h1>
             <p className="fade-up" style={{ color: "var(--text-secondary)", fontSize: 17, lineHeight: 1.65, maxWidth: 540, margin: "0 auto 28px", animationDelay: ".2s" }}>Connect once, auto-fetch forever — across electricity, water, gas, telecom, broadband, and DTH.</p>
             <Link href="/signup" className="btn-primary fade-up" style={{ animationDelay: ".3s" }}>Get Started</Link>
             <div className="fade-up" style={{ marginTop: 32, animationDelay: ".4s", display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 24 }}>
@@ -44,7 +44,7 @@ export default function ServicesPage() {
 
         <section className="section" style={{ background: "var(--bg-section-alt)" }}>
           <div className="container">
-            <h2 data-animate="up" className="sec-h" style={{ textAlign: "center", marginBottom: 64 }}>How bill fetching works</h2>
+            <h2 data-animate="up" className="sec-h" style={{ textAlign: "center", marginBottom: 64 }}>How Bill Fetching Works</h2>
             <div data-stagger className="steps-4" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 20, position: "relative" }}>
               <div className="timeline-line" style={{ position: "absolute", top: 36, left: "12%", right: "12%" }} />
               {[
@@ -68,7 +68,7 @@ export default function ServicesPage() {
 
         <section className="section" style={{ background: "var(--bg-page)" }}>
           <div className="container">
-            <h2 data-animate="up" className="sec-h" style={{ textAlign: "center", marginBottom: 48 }}>Supported categories</h2>
+            <h2 data-animate="up" className="sec-h" style={{ textAlign: "center", marginBottom: 48 }}>Supported Categories</h2>
             <div data-stagger className="cat-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }}>
               {CATS.map((c) => (
                 <div key={c.t} className="card card-hoverable category-card" style={{ textAlign: "center", padding: 28, "--cat": c.c }}>
@@ -86,7 +86,7 @@ export default function ServicesPage() {
 
         <section className="section" style={{ background: "var(--bg-section-alt)" }}>
           <div className="container">
-            <h2 data-animate="up" className="sec-h" style={{ textAlign: "center", marginBottom: 48 }}>Everything you need for billing operations</h2>
+            <h2 data-animate="up" className="sec-h" style={{ textAlign: "center", marginBottom: 48 }}>Everything You Need For Billing Operations</h2>
             <div data-stagger className="feat-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
               {[
                 ["Bill submission and draft management", "Save bills as drafts, edit before submit"],
