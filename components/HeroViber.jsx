@@ -96,7 +96,7 @@ export default function HeroViber() {
             Book A Demo <i className="ti ti-chevron-right" aria-hidden="true" />
           </Link>
         </div>
-        <div className="fade-up" style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 36, flexWrap: "wrap", animationDelay: ".56s" }}>
+        <div className="fade-up hero-stats" style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 36, flexWrap: "wrap", animationDelay: ".56s" }}>
           {[["50+","Utility Providers"],["5","User Roles"],["99.8%","Settlement Rate"],["₹2Cr+","Monthly Processed"]].map(([n,l],i) => (
             <div key={l} style={{ display: "flex", alignItems: "center", gap: 36 }}>
               {i > 0 && <div style={{ width: 1, height: 36, background: "var(--border-default)" }} />}
@@ -114,6 +114,15 @@ export default function HeroViber() {
           0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
           60% { box-shadow: 0 0 0 16px rgba(34,197,94,0); }
           100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+        }
+        @media (max-width: 640px) {
+          .hero-stats { gap: 18px !important; }
+          .hero-stats > div { gap: 18px !important; }
+          .hero-stats :global(div > div:first-child) { font-size: 20px !important; }
+          .hero-stats :global(div > div:last-child) { font-size: 11px !important; }
+        }
+        @media (max-width: 900px) {
+          .hero-logo { height: 64px !important; }
         }
       `}</style>
     </section>

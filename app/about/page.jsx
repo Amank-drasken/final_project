@@ -63,46 +63,73 @@ export default function AboutPage() {
             </div>
             <div data-animate="scale" style={{ position: "relative", maxWidth: 620, margin: "48px auto 0" }}>
               <img src="/img/map.png" alt="India map" style={{ width: "100%", height: "auto", display: "block", opacity: 0.92 }} />
-              <svg viewBox="0 0 600 700" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", overflow: "visible", pointerEvents: "none" }}>
+              <svg viewBox="0 0 1828 2046" preserveAspectRatio="xMidYMid meet" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", overflow: "visible", pointerEvents: "none" }}>
                 <defs>
                   <radialGradient id="pulseG"><stop offset="0%" stopColor="#22C55E" stopOpacity="0.5" /><stop offset="100%" stopColor="#22C55E" stopOpacity="0" /></radialGradient>
                 </defs>
-                {/* Reach lines from Delhi (236,178) */}
+                {/* Delhi HQ at (621, 615). Coordinates from real lat/long projected onto 1828x2046 map.png */}
                 {[
-                  { tx: 168, ty: 388, name: "Mumbai", dly: 0 },
-                  { tx: 268, ty: 446, name: "Hyderabad", dly: 0.2 },
-                  { tx: 244, ty: 524, name: "Bangalore", dly: 0.4 },
-                  { tx: 304, ty: 552, name: "Chennai", dly: 0.6 },
-                  { tx: 416, ty: 326, name: "Kolkata", dly: 0.8 },
-                  { tx: 168, ty: 244, name: "Jaipur", dly: 1.0 },
-                  { tx: 310, ty: 224, name: "Lucknow", dly: 1.2 },
-                  { tx: 132, ty: 308, name: "Ahmedabad", dly: 1.4 },
-                  { tx: 250, ty: 320, name: "Bhopal", dly: 1.6 },
-                  { tx: 210, ty: 130, name: "Chandigarh", dly: 1.8 },
+                  { tx: 491,  ty: 245,  name: "Srinagar",     dly: 0    },
+                  { tx: 540,  ty: 470,  name: "Amritsar",     dly: 0.05 },
+                  { tx: 621,  ty: 446,  name: "Shimla",       dly: 0.1  },
+                  { tx: 600,  ty: 510,  name: "Chandigarh",   dly: 0.15 },
+                  { tx: 665,  ty: 500,  name: "Dehradun",     dly: 0.2  },
+                  { tx: 460,  ty: 780,  name: "Jaipur",       dly: 0.3  },
+                  { tx: 720,  ty: 700,  name: "Agra",         dly: 0.35 },
+                  { tx: 823,  ty: 736,  name: "Lucknow",      dly: 0.4  },
+                  { tx: 940,  ty: 760,  name: "Varanasi",     dly: 0.45 },
+                  { tx: 371,  ty: 979,  name: "Gandhinagar",  dly: 0.5  },
+                  { tx: 371,  ty: 1005, name: "Ahmedabad",    dly: 0.55 },
+                  { tx: 460,  ty: 1100, name: "Surat",        dly: 0.6  },
+                  { tx: 1062, ty: 819,  name: "Patna",        dly: 0.7  },
+                  { tx: 1249, ty: 706,  name: "Gangtok",      dly: 0.8  },
+                  { tx: 1426, ty: 819,  name: "Shillong",     dly: 0.85 },
+                  { tx: 1421, ty: 785,  name: "Guwahati",     dly: 0.9  },
+                  { tx: 1518, ty: 719,  name: "Itanagar",     dly: 0.95 },
+                  { tx: 1470, ty: 760,  name: "Tezpur",       dly: 0.97 },
+                  { tx: 1610, ty: 740,  name: "Tinsukia",     dly: 0.99 },
+                  { tx: 1580, ty: 790,  name: "Dibrugarh",    dly: 1.01 },
+                  { tx: 1680, ty: 700,  name: "Pasighat",     dly: 1.03 },
+                  { tx: 1490, ty: 850,  name: "Dimapur",      dly: 1.05 },
+                  { tx: 1239, ty: 1018, name: "Kolkata",      dly: 1.05 },
+                  { tx: 1085, ty: 968,  name: "Ranchi",       dly: 1.1  },
+                  { tx: 645,  ty: 985,  name: "Bhopal",       dly: 1.15 },
+                  { tx: 870,  ty: 1105, name: "Raipur",       dly: 1.2  },
+                  { tx: 1098, ty: 1180, name: "Bhubaneswar",  dly: 1.25 },
+                  { tx: 400,  ty: 1260, name: "Mumbai",       dly: 1.3  },
+                  { tx: 510,  ty: 1310, name: "Pune",         dly: 1.35 },
+                  { tx: 700,  ty: 1378, name: "Hyderabad",    dly: 1.4  },
+                  { tx: 808,  ty: 1438, name: "Amaravati",    dly: 1.45 },
+                  { tx: 452,  ty: 1502, name: "Panaji",       dly: 1.5  },
+                  { tx: 650,  ty: 1679, name: "Bengaluru",    dly: 1.55 },
+                  { tx: 530,  ty: 1820, name: "Kochi",        dly: 1.65 },
+                  { tx: 620,  ty: 1923, name: "Thiruvananthapuram", dly: 1.7 },
                 ].map((d, i) => {
-                  const cx = 236, cy = 178;
+                  const cx = 621, cy = 615;
                   const mx = (cx + d.tx) / 2 + ((d.tx - cx) * 0.0);
                   const my = (cy + d.ty) / 2 - 24;
                   return (
                     <g key={i} className="reach" style={{ "--dly": `${d.dly}s` }}>
                       <path d={`M ${cx} ${cy} Q ${mx} ${my} ${d.tx} ${d.ty}`} className="reach-line" />
-                      <circle cx={d.tx} cy={d.ty} r="5" className="dest-pin" style={{ animationDelay: `${d.dly + 1.4}s` }} />
-                      <g className="dest-tooltip" transform={`translate(${d.tx},${d.ty - 18})`}>
-                        <rect x="-32" y="-12" width="64" height="18" rx="4" fill="rgba(15,27,36,0.9)" />
-                        <text x="0" y="0" textAnchor="middle" fill="#fff" fontSize="9" fontWeight="600">{d.name}</text>
+                      <circle cx={d.tx} cy={d.ty} r="14" className="dest-pin" style={{ animationDelay: `${d.dly + 1.4}s` }} />
+                      <circle cx={d.tx} cy={d.ty} r="50" fill="transparent" className="hover-zone" />
+                      <g className="dest-label" transform={`translate(${d.tx},${d.ty - 38})`}>
+                        <rect x="-72" y="-22" width="144" height="32" rx="8" fill="rgba(15,27,36,0.94)" />
+                        <text x="0" y="0" textAnchor="middle" fill="#fff" fontSize="20" fontWeight="700">{d.name}</text>
+                        <polygon points="-8,10 8,10 0,18" fill="rgba(15,27,36,0.94)" />
                       </g>
                     </g>
                   );
                 })}
                 {/* Delhi HQ */}
                 <g className="delhi-group">
-                  <circle cx="236" cy="178" r="22" fill="none" stroke="#22C55E" strokeWidth="2" className="delhi-pulse" />
-                  <circle cx="236" cy="178" r="9" fill="#22C55E" className="delhi-pin" />
-                  <circle cx="236" cy="178" r="4" fill="#fff" />
-                  <g transform="translate(236, 154)">
-                    <rect x="-32" y="-14" width="64" height="20" rx="4" fill="rgba(15,27,36,0.92)" />
-                    <text x="0" y="0" textAnchor="middle" fill="#fff" fontSize="10" fontWeight="700">Delhi HQ</text>
-                    <polygon points="-4,6 4,6 0,11" fill="rgba(15,27,36,0.92)" />
+                  <circle cx="621" cy="615" r="60" fill="none" stroke="#22C55E" strokeWidth="4" className="delhi-pulse" />
+                  <circle cx="621" cy="615" r="26" fill="#22C55E" className="delhi-pin" />
+                  <circle cx="621" cy="615" r="12" fill="#fff" />
+                  <g transform="translate(621, 543)">
+                    <rect x="-78" y="-24" width="156" height="34" rx="8" fill="rgba(15,27,36,0.94)" />
+                    <text x="0" y="0" textAnchor="middle" fill="#fff" fontSize="24" fontWeight="700">Delhi HQ</text>
+                    <polygon points="-10,10 10,10 0,22" fill="rgba(15,27,36,0.94)" />
                   </g>
                 </g>
               </svg>
@@ -111,17 +138,18 @@ export default function AboutPage() {
           <style>{`
             @keyframes pinBlink { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.55; transform: scale(0.85); } }
             @keyframes pinSoftBlink { 0%,100% { opacity: 0.85; } 50% { opacity: 0.45; } }
-            @keyframes delhiPulse { 0% { r: 9; opacity: 0.6; } 100% { r: 34; opacity: 0; } }
-            @keyframes lineGrow { 0% { stroke-dashoffset: 300; opacity: 0; } 15% { opacity: 0.5; } 100% { stroke-dashoffset: 0; opacity: 0.5; } }
+            @keyframes delhiPulse { 0% { r: 26; opacity: 0.6; } 100% { r: 90; opacity: 0; } }
+            @keyframes lineGrow { 0% { stroke-dashoffset: 1200; opacity: 0; } 15% { opacity: 0.55; } 100% { stroke-dashoffset: 0; opacity: 0.55; } }
             @keyframes pinAppear { 0% { opacity: 0; transform: scale(0.4); } 100% { opacity: 1; transform: scale(1); } }
-            .delhi-pin { transform-origin: 236px 178px; animation: pinBlink 1.5s ease-in-out infinite; }
-            .delhi-pulse { transform-origin: 236px 178px; animation: delhiPulse 2s ease-out infinite; }
-            .reach-line { fill: none; stroke: #22C55E; stroke-width: 1.5; stroke-dasharray: 6 4; stroke-linecap: round; opacity: 0; animation: lineGrow 1.4s ease-out var(--dly) forwards; }
+            .delhi-pin { transform-origin: 621px 615px; animation: pinBlink 1.5s ease-in-out infinite; }
+            .delhi-pulse { transform-origin: 621px 615px; animation: delhiPulse 2s ease-out infinite; }
+            .reach-line { fill: none; stroke: #22C55E; stroke-width: 4; stroke-dasharray: 18 12; stroke-linecap: round; opacity: 0; animation: lineGrow 1.4s ease-out var(--dly) forwards; }
             .dest-pin { fill: #16A34A; opacity: 0; transform-origin: center; animation: pinAppear 400ms ease-out forwards, pinSoftBlink 3s ease-in-out 2s infinite; }
-            .dest-tooltip { opacity: 0; transition: opacity 200ms; }
-            .reach:hover .dest-tooltip { opacity: 1; }
-            .reach:hover .reach-line { opacity: 0.85 !important; stroke-width: 2; }
-            .reach:hover .dest-pin { opacity: 1; }
+            .dest-label { opacity: 0; transition: opacity 200ms ease; pointer-events: none; }
+            .reach { pointer-events: auto; }
+            .reach:hover .dest-label { opacity: 1; }
+            .reach:hover .reach-line { opacity: 0.9 !important; stroke-width: 6; }
+            .reach:hover .dest-pin { opacity: 1; transform: scale(1.3); }
             .reach { pointer-events: auto; cursor: pointer; }
             .delhi-group:hover ~ .reach .reach-line { opacity: 0.7; }
           `}</style>

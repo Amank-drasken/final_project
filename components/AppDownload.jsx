@@ -5,7 +5,7 @@ export default function AppDownload() {
         <div style={{ position: "absolute", left: "10%", top: "10%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(74,222,128,0.18), transparent 70%)", filter: "blur(60px)" }} />
         <div style={{ position: "absolute", right: "5%", bottom: "5%", width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(34,197,94,0.12), transparent 70%)", filter: "blur(60px)" }} />
       </div>
-      <div className="container" style={{ position: "relative", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }}>
+      <div className="container app-dl-grid" style={{ position: "relative", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }}>
         <div data-animate="left">
           <div style={{ color: "#4ADE80", fontSize: 12, fontWeight: 700, letterSpacing: 1, marginBottom: 12 }}>AVAILABLE ON MOBILE</div>
           <h2 style={{ fontSize: 36, fontWeight: 700, lineHeight: 1.2, margin: "0 0 16px" }}>Manage Your Operations On The Go</h2>
@@ -20,7 +20,7 @@ export default function AppDownload() {
           <Phone rotate="6deg" delay="1s" dur="5.5s" gradient="linear-gradient(180deg, #06B6D4, #0891B2)" label="Dashboard" value="₹1,24,500" offset={60} />
         </div>
       </div>
-      <style>{`@media (max-width: 768px) { .container { grid-template-columns: 1fr !important; } }`}</style>
+      <style>{`@media (max-width: 768px) { .app-dl-grid { grid-template-columns: 1fr !important; gap: 40px !important; } .app-dl-grid h2 { font-size: 26px !important; } }`}</style>
     </section>
   );
 }
