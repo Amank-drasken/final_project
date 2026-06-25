@@ -54,7 +54,7 @@ export default function AboutPage() {
         </section>
 
         {/* OUR REACH — India Map */}
-        <section className="section" style={{ background: "var(--bg-page)", position: "relative", overflow: "hidden" }}>
+        <section className="section" style={{ background: "#FFFFFF", position: "relative", overflow: "hidden" }}>
           <div className="container" style={{ textAlign: "center" }}>
             <div data-animate="up">
               <div className="badge-pill" style={{ marginBottom: 18 }}><span className="dot" />OUR REACH</div>
@@ -62,7 +62,10 @@ export default function AboutPage() {
               <p style={{ color: "var(--text-secondary)", fontSize: 16, maxWidth: 520, margin: "0 auto" }}>From our headquarters in Delhi, we're connecting utility payment businesses across every major state.</p>
             </div>
             <div data-animate="scale" style={{ position: "relative", maxWidth: 620, margin: "48px auto 0" }}>
-              <img src="/img/map.png" alt="India map" style={{ width: "100%", height: "auto", display: "block", opacity: 0.92 }} />
+              <img src="/img/map.png" alt="India map" style={{ width: "100%", height: "auto", display: "block" }} />
+              {/* Mask Lakshadweep + Andaman & Nicobar islands with white overlay */}
+              <div aria-hidden="true" style={{ position: "absolute", left: 0, bottom: 0, width: "26%", height: "10%", background: "#fff", pointerEvents: "none" }} />
+              <div aria-hidden="true" style={{ position: "absolute", right: 0, bottom: 0, width: "32%", height: "32%", background: "#fff", pointerEvents: "none" }} />
               <svg viewBox="0 0 1828 2046" preserveAspectRatio="xMidYMid meet" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", overflow: "visible", pointerEvents: "none" }}>
                 <defs>
                   <radialGradient id="pulseG"><stop offset="0%" stopColor="#22C55E" stopOpacity="0.5" /><stop offset="100%" stopColor="#22C55E" stopOpacity="0" /></radialGradient>

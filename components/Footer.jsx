@@ -47,7 +47,7 @@ export default function Footer() {
 
         <div style={{ marginTop: 48, paddingTop: 20, borderTop: "1px solid rgba(255,255,255,0.08)", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
           <span style={{ fontSize: 12, color: "rgba(255,255,255,0.4)" }}>© 2026 Gatimaan Payments. All rights reserved.</span>
-          <span style={{ fontSize: 12, color: "rgba(255,255,255,0.4)" }}>+91 70530 99911 · support@gatimaan.in</span>
+          <span style={{ fontSize: 12, color: "rgba(255,255,255,0.4)" }}>+91 9213696666 · gatimaanpayments@gmail.com</span>
         </div>
       </div>
 

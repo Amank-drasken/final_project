@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HeroViber() {
   return (
-    <section style={{ position: "relative", minHeight: "100vh", padding: "120px 24px 80px", textAlign: "center", background: "var(--bg-page)", overflow: "hidden" }}>
+    <section style={{ position: "relative", minHeight: "100vh", padding: "60px 24px 80px", textAlign: "center", background: "var(--bg-page)", overflow: "hidden" }}>
       {/* Background blobs */}
       <div aria-hidden="true" style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 0 }}>
         <div className="blob" style={{ width: 600, height: 500, top: -100, left: -150, background: "radial-gradient(circle, rgba(134,239,172,0.5), rgba(134,239,172,0) 70%)", animation: "blobMorph 14s ease-in-out infinite alternate", "--tx": "40px", "--ty": "30px", "--s": 1.1 }} />
@@ -73,10 +73,7 @@ export default function HeroViber() {
 
       {/* Center content */}
       <div style={{ position: "relative", maxWidth: 720, margin: "0 auto", zIndex: 2 }}>
-        <img className="fade-up hero-logo" src="/img/logo.jpeg" alt="Gatimaan Payments" style={{ height: 80, width: "auto", borderRadius: 10, margin: "0 auto 12px", display: "block", boxShadow: "0 0 0 0 rgba(34,197,94,0.4)", animation: "logoEntry 600ms cubic-bezier(0.34,1.56,0.64,1) both, logoFlash 1200ms ease-out 600ms both" }} />
-        <div className="fade-up" style={{ fontSize: 28, fontWeight: 800, letterSpacing: 0.5, marginBottom: 16, animationDelay: ".08s" }}>
-          <span style={{ color: "var(--brand-navy)" }}>Gati</span><span style={{ color: "var(--brand-green-mid)" }}>Maan</span>
-        </div>
+        <img className="fade-up hero-logo" src="/img/logo.jpeg" alt="Gatimaan Payments" style={{ height: 360, width: "auto", borderRadius: 24, margin: "0 auto 32px", display: "block", boxShadow: "0 0 0 0 rgba(34,197,94,0.4)", animation: "logoEntry 600ms cubic-bezier(0.34,1.56,0.64,1) both, logoFlash 1200ms ease-out 600ms both" }} />
         <div className="badge-pill fade-up" style={{ marginBottom: 20, animationDelay: ".16s" }}>
           <span className="dot" />
           <span>UTILITY BILLING &amp; OPERATIONS PLATFORM</span>
@@ -122,7 +119,10 @@ export default function HeroViber() {
           .hero-stats :global(div > div:last-child) { font-size: 11px !important; }
         }
         @media (max-width: 900px) {
-          .hero-logo { height: 64px !important; }
+          .hero-logo { height: 260px !important; }
+        }
+        @media (max-width: 480px) {
+          .hero-logo { height: 200px !important; }
         }
       `}</style>
       <style jsx global>{`
