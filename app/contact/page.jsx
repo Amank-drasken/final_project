@@ -110,7 +110,7 @@ export default function ContactPage() {
             <div data-animate="right" style={{ display: "flex", flexDirection: "column", gap: 16 }}>
               <InfoCard ic="ti-phone" bg="var(--brand-green-pale)" color="var(--brand-green-dark)" title="Call Us" main="+91 9213696666" sub="Mon–Sat, 9am–7pm IST" />
               <InfoCard ic="ti-mail" bg="rgba(6,182,212,0.12)" color="var(--accent-cyan)" title="Mail" main="gatimaanpayments@gmail.com" sub="Reply within 24 hours" />
-              <InfoCard ic="ti-map-pin" bg="rgba(27,43,107,0.1)" color="var(--brand-navy)" title="Visit Us" main="RS INNOVATIVE ENTERPRISES INDIA PRIVATE LIMITED" sub="Address line, City, State — PIN" />
+              <InfoCard ic="ti-map-pin" bg="rgba(27,43,107,0.1)" color="var(--brand-navy)" title="Visit Us" main="RS INNOVATIVE ENTERPRISES INDIA PRIVATE LIMITED" sub="Delhi" />
             </div>
           </div>
           <style>{`@media(max-width:900px){.contact-grid{grid-template-columns:1fr !important}}`}</style>
