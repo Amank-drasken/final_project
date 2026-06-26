@@ -74,9 +74,9 @@ export default function HeroViber() {
       {/* Center content */}
       <div style={{ position: "relative", maxWidth: 720, margin: "0 auto", zIndex: 2 }}>
         <img className="fade-up hero-logo" src="/img/logo.jpeg" alt="Gatimaan Payments" style={{ height: 360, width: "auto", borderRadius: 24, margin: "0 auto 32px", display: "block", boxShadow: "0 0 0 0 rgba(34,197,94,0.4)", animation: "logoEntry 600ms cubic-bezier(0.34,1.56,0.64,1) both, logoFlash 1200ms ease-out 600ms both" }} />
-        <div className="badge-pill fade-up" style={{ marginBottom: 20, animationDelay: ".16s" }}>
-          <span className="dot" />
-          <span>UTILITY BILLING &amp; OPERATIONS PLATFORM</span>
+        <div className="badge-pill fade-up hero-badge" style={{ marginBottom: 24, animationDelay: ".16s", fontSize: 14, padding: "9px 22px", letterSpacing: "1.2px", boxShadow: "0 4px 18px rgba(22,163,74,0.18)" }}>
+          <span className="dot" style={{ width: 8, height: 8 }} />
+          <span style={{ background: "linear-gradient(90deg, #15803D, #22C55E, #15803D)", backgroundSize: "200% 100%", WebkitBackgroundClip: "text", backgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent", animation: "badgeShine 3s linear infinite" }}>UTILITY BILLING &amp; OPERATIONS PLATFORM</span>
         </div>
         <h1 className="fade-up" style={{ fontSize: "clamp(34px, 6vw, 64px)", fontWeight: 800, lineHeight: 1.08, margin: "0 0 12px", animationDelay: ".24s", color: "var(--text-primary)", letterSpacing: "-0.02em" }}>
           One Platform To Manage <span className="gradient-text">All Utility Operations</span>
@@ -106,6 +106,9 @@ export default function HeroViber() {
         </div>
       </div>
       <style jsx>{`
+        @keyframes badgeShine { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+        @keyframes badgePulse { 0%, 100% { box-shadow: 0 4px 18px rgba(22,163,74,0.18); transform: scale(1); } 50% { box-shadow: 0 6px 26px rgba(22,163,74,0.35); transform: scale(1.04); } }
+        .hero-badge.fade-up { animation: fadeUp 650ms cubic-bezier(0.16,1,0.3,1) both, badgePulse 2.4s ease-in-out 700ms infinite !important; }
         @keyframes logoEntry { 0% { opacity: 0; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1); } }
         @keyframes logoFlash {
           0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }

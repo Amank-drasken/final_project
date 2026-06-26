@@ -60,10 +60,10 @@ export default function Header() {
       }}
     >
       <div className="container" style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <Link href="/" style={{ display: "flex", alignItems: "flex-start", gap: 4, position: "relative" }}>
+        <Link href="/" style={{ display: "flex", alignItems: "flex-start", gap: 0, position: "relative" }}>
           <img src="/img/logo.jpeg" alt="Gatimaan Payments" style={{ height: 48, width: "auto", borderRadius: 6 }} />
-          <sup style={{ fontSize: 9, fontWeight: 700, color: "var(--brand-green-dark)", lineHeight: 1, marginTop: 2, marginRight: 6 }}>TM</sup>
-          <span className="brand-text" style={{ fontSize: 15, fontWeight: 600, marginTop: 14 }}>
+          <sup style={{ fontSize: 9, fontWeight: 700, color: "var(--brand-green-dark)", lineHeight: 1, marginTop: 2, marginLeft: 1, marginRight: 2 }}>TM</sup>
+          <span className="brand-text" style={{ fontSize: 15, fontWeight: 600, marginTop: 14, marginLeft: 2 }}>
             <span className="gati">Gati</span><span className="maan">Maan</span><span className="payments"> Payments</span>
           </span>
         </Link>

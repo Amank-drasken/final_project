@@ -62,55 +62,52 @@ export default function AboutPage() {
               <p style={{ color: "var(--text-secondary)", fontSize: 16, maxWidth: 520, margin: "0 auto" }}>From our headquarters in Delhi, we're connecting utility payment businesses across every major state.</p>
             </div>
             <div data-animate="scale" style={{ position: "relative", maxWidth: 620, margin: "48px auto 0" }}>
-              <img src="/img/map.png" alt="India map" style={{ width: "100%", height: "auto", display: "block" }} />
-              {/* Mask Lakshadweep + Andaman & Nicobar islands with white overlay */}
-              <div aria-hidden="true" style={{ position: "absolute", left: 0, bottom: 0, width: "26%", height: "10%", background: "#fff", pointerEvents: "none" }} />
-              <div aria-hidden="true" style={{ position: "absolute", right: 0, bottom: 0, width: "32%", height: "32%", background: "#fff", pointerEvents: "none" }} />
-              <svg viewBox="0 0 1828 2046" preserveAspectRatio="xMidYMid meet" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", overflow: "visible", pointerEvents: "none" }}>
+              <img src="/img/map.png" alt="India map" style={{ width: "100%", height: "auto", display: "block", mixBlendMode: "lighten" }} />
+              <svg viewBox="0 0 2048 2076" preserveAspectRatio="xMidYMid meet" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", overflow: "visible", pointerEvents: "none" }}>
                 <defs>
                   <radialGradient id="pulseG"><stop offset="0%" stopColor="#22C55E" stopOpacity="0.5" /><stop offset="100%" stopColor="#22C55E" stopOpacity="0" /></radialGradient>
                 </defs>
                 {/* Delhi HQ at (621, 615). Coordinates from real lat/long projected onto 1828x2046 map.png */}
                 {[
-                  { tx: 491,  ty: 245,  name: "Srinagar",     dly: 0    },
-                  { tx: 540,  ty: 470,  name: "Amritsar",     dly: 0.05 },
-                  { tx: 621,  ty: 446,  name: "Shimla",       dly: 0.1  },
-                  { tx: 600,  ty: 510,  name: "Chandigarh",   dly: 0.15 },
-                  { tx: 665,  ty: 500,  name: "Dehradun",     dly: 0.2  },
-                  { tx: 460,  ty: 780,  name: "Jaipur",       dly: 0.3  },
-                  { tx: 720,  ty: 700,  name: "Agra",         dly: 0.35 },
-                  { tx: 823,  ty: 736,  name: "Lucknow",      dly: 0.4  },
-                  { tx: 940,  ty: 760,  name: "Varanasi",     dly: 0.45 },
-                  { tx: 371,  ty: 979,  name: "Gandhinagar",  dly: 0.5  },
-                  { tx: 371,  ty: 1005, name: "Ahmedabad",    dly: 0.55 },
-                  { tx: 460,  ty: 1100, name: "Surat",        dly: 0.6  },
-                  { tx: 1062, ty: 819,  name: "Patna",        dly: 0.7  },
-                  { tx: 1249, ty: 706,  name: "Gangtok",      dly: 0.8  },
-                  { tx: 1426, ty: 819,  name: "Shillong",     dly: 0.85 },
-                  { tx: 1421, ty: 785,  name: "Guwahati",     dly: 0.9  },
-                  { tx: 1518, ty: 719,  name: "Itanagar",     dly: 0.95 },
-                  { tx: 1470, ty: 760,  name: "Tezpur",       dly: 0.97 },
-                  { tx: 1610, ty: 740,  name: "Tinsukia",     dly: 0.99 },
-                  { tx: 1580, ty: 790,  name: "Dibrugarh",    dly: 1.01 },
-                  { tx: 1680, ty: 700,  name: "Pasighat",     dly: 1.03 },
-                  { tx: 1545, ty: 815,  name: "Kohima",       dly: 1.04 },
-                  { tx: 1530, ty: 880,  name: "Imphal",       dly: 1.07 },
-                  { tx: 1500, ty: 940,  name: "Aizawl",       dly: 1.09 },
-                  { tx: 1239, ty: 1018, name: "Kolkata",      dly: 1.05 },
-                  { tx: 1085, ty: 968,  name: "Ranchi",       dly: 1.1  },
-                  { tx: 645,  ty: 985,  name: "Bhopal",       dly: 1.15 },
-                  { tx: 870,  ty: 1105, name: "Raipur",       dly: 1.2  },
-                  { tx: 1098, ty: 1180, name: "Bhubaneswar",  dly: 1.25 },
-                  { tx: 400,  ty: 1260, name: "Mumbai",       dly: 1.3  },
-                  { tx: 510,  ty: 1310, name: "Pune",         dly: 1.35 },
-                  { tx: 700,  ty: 1378, name: "Hyderabad",    dly: 1.4  },
-                  { tx: 808,  ty: 1438, name: "Amaravati",    dly: 1.45 },
-                  { tx: 452,  ty: 1502, name: "Panaji",       dly: 1.5  },
-                  { tx: 650,  ty: 1679, name: "Bengaluru",    dly: 1.55 },
-                  { tx: 530,  ty: 1820, name: "Kochi",        dly: 1.65 },
-                  { tx: 620,  ty: 1923, name: "Thiruvananthapuram", dly: 1.7 },
+                  { tx: 550,  ty: 248,  name: "Srinagar",     dly: 0    },
+                  { tx: 605,  ty: 477,  name: "Amritsar",     dly: 0.05 },
+                  { tx: 695,  ty: 453,  name: "Shimla",       dly: 0.1  },
+                  { tx: 672,  ty: 518,  name: "Chandigarh",   dly: 0.15 },
+                  { tx: 745,  ty: 508,  name: "Dehradun",     dly: 0.2  },
+                  { tx: 515,  ty: 792,  name: "Jaipur",       dly: 0.3  },
+                  { tx: 807,  ty: 711,  name: "Agra",         dly: 0.35 },
+                  { tx: 922,  ty: 747,  name: "Lucknow",      dly: 0.4  },
+                  { tx: 1053, ty: 771,  name: "Varanasi",     dly: 0.45 },
+                  { tx: 416,  ty: 994,  name: "Gandhinagar",  dly: 0.5  },
+                  { tx: 416,  ty: 1020, name: "Ahmedabad",    dly: 0.55 },
+                  { tx: 515,  ty: 1117, name: "Surat",        dly: 0.6  },
+                  { tx: 1189, ty: 831,  name: "Patna",        dly: 0.7  },
+                  { tx: 1340, ty: 735,  name: "Gangtok",      dly: 0.8  },
+                  { tx: 1500, ty: 850,  name: "Shillong",     dly: 0.85 },
+                  { tx: 1490, ty: 815,  name: "Guwahati",     dly: 0.9  },
+                  { tx: 1595, ty: 760,  name: "Itanagar",     dly: 0.95 },
+                  { tx: 1550, ty: 795,  name: "Tezpur",       dly: 0.97 },
+                  { tx: 1700, ty: 780,  name: "Tinsukia",     dly: 0.99 },
+                  { tx: 1665, ty: 825,  name: "Dibrugarh",    dly: 1.01 },
+                  { tx: 1750, ty: 735,  name: "Pasighat",     dly: 1.03 },
+                  { tx: 1625, ty: 850,  name: "Kohima",       dly: 1.04 },
+                  { tx: 1605, ty: 905,  name: "Imphal",       dly: 1.07 },
+                  { tx: 1565, ty: 955,  name: "Aizawl",       dly: 1.09 },
+                  { tx: 1388, ty: 1033, name: "Kolkata",      dly: 1.05 },
+                  { tx: 1215, ty: 982,  name: "Ranchi",       dly: 1.1  },
+                  { tx: 722,  ty: 1000, name: "Bhopal",       dly: 1.15 },
+                  { tx: 974,  ty: 1121, name: "Raipur",       dly: 1.2  },
+                  { tx: 1230, ty: 1198, name: "Bhubaneswar",  dly: 1.25 },
+                  { tx: 448,  ty: 1279, name: "Mumbai",       dly: 1.3  },
+                  { tx: 571,  ty: 1330, name: "Pune",         dly: 1.35 },
+                  { tx: 784,  ty: 1398, name: "Hyderabad",    dly: 1.4  },
+                  { tx: 905,  ty: 1460, name: "Amaravati",    dly: 1.45 },
+                  { tx: 506,  ty: 1525, name: "Panaji",       dly: 1.5  },
+                  { tx: 728,  ty: 1680, name: "Bengaluru",    dly: 1.55 },
+                  { tx: 600,  ty: 1810, name: "Kochi",        dly: 1.65 },
+                  { tx: 680,  ty: 1900, name: "Thiruvananthapuram", dly: 1.7 },
                 ].map((d, i) => {
-                  const cx = 621, cy = 615;
+                  const cx = 695, cy = 624;
                   const mx = (cx + d.tx) / 2 + ((d.tx - cx) * 0.0);
                   const my = (cy + d.ty) / 2 - 24;
                   return (
@@ -118,20 +115,20 @@ export default function AboutPage() {
                       <path d={`M ${cx} ${cy} Q ${mx} ${my} ${d.tx} ${d.ty}`} className="reach-line" />
                       <circle cx={d.tx} cy={d.ty} r="14" className="dest-pin" style={{ animationDelay: `${d.dly + 1.4}s` }} />
                       <circle cx={d.tx} cy={d.ty} r="50" fill="transparent" className="hover-zone" />
-                      <g className="dest-label" transform={`translate(${d.tx},${d.ty - 38})`}>
-                        <rect x="-72" y="-22" width="144" height="32" rx="8" fill="rgba(15,27,36,0.94)" />
-                        <text x="0" y="0" textAnchor="middle" fill="#fff" fontSize="20" fontWeight="700">{d.name}</text>
-                        <polygon points="-8,10 8,10 0,18" fill="rgba(15,27,36,0.94)" />
+                      <g className="dest-label" transform={`translate(${d.tx},${d.ty - 56})`}>
+                        <rect x={-Math.max(110, d.name.length * 11)} y="-32" width={Math.max(220, d.name.length * 22)} height="48" rx="10" fill="rgba(15,27,36,0.95)" stroke="#22C55E" strokeWidth="1.5" />
+                        <text x="0" y="2" textAnchor="middle" fill="#fff" fontSize="30" fontWeight="800">{d.name}</text>
+                        <polygon points="-12,16 12,16 0,28" fill="rgba(15,27,36,0.95)" />
                       </g>
                     </g>
                   );
                 })}
                 {/* Delhi HQ */}
                 <g className="delhi-group">
-                  <circle cx="621" cy="615" r="60" fill="none" stroke="#22C55E" strokeWidth="4" className="delhi-pulse" />
-                  <circle cx="621" cy="615" r="26" fill="#22C55E" className="delhi-pin" />
-                  <circle cx="621" cy="615" r="12" fill="#fff" />
-                  <g transform="translate(621, 543)">
+                  <circle cx="695" cy="624" r="60" fill="none" stroke="#22C55E" strokeWidth="4" className="delhi-pulse" />
+                  <circle cx="695" cy="624" r="26" fill="#22C55E" className="delhi-pin" />
+                  <circle cx="695" cy="624" r="12" fill="#fff" />
+                  <g transform="translate(695, 552)">
                     <rect x="-78" y="-24" width="156" height="34" rx="8" fill="rgba(15,27,36,0.94)" />
                     <text x="0" y="0" textAnchor="middle" fill="#fff" fontSize="24" fontWeight="700">Delhi HQ</text>
                     <polygon points="-10,10 10,10 0,22" fill="rgba(15,27,36,0.94)" />
@@ -146,8 +143,8 @@ export default function AboutPage() {
             @keyframes delhiPulse { 0% { r: 26; opacity: 0.6; } 100% { r: 90; opacity: 0; } }
             @keyframes lineGrow { 0% { stroke-dashoffset: 1200; opacity: 0; } 15% { opacity: 0.55; } 100% { stroke-dashoffset: 0; opacity: 0.55; } }
             @keyframes pinAppear { 0% { opacity: 0; transform: scale(0.4); } 100% { opacity: 1; transform: scale(1); } }
-            .delhi-pin { transform-origin: 621px 615px; animation: pinBlink 1.5s ease-in-out infinite; }
-            .delhi-pulse { transform-origin: 621px 615px; animation: delhiPulse 2s ease-out infinite; }
+            .delhi-pin { transform-origin: 695px 624px; animation: pinBlink 1.5s ease-in-out infinite; }
+            .delhi-pulse { transform-origin: 695px 624px; animation: delhiPulse 2s ease-out infinite; }
             .reach-line { fill: none; stroke: #22C55E; stroke-width: 4; stroke-dasharray: 18 12; stroke-linecap: round; opacity: 0; animation: lineGrow 1.4s ease-out var(--dly) forwards; }
             .dest-pin { fill: #16A34A; opacity: 0; transform-origin: center; animation: pinAppear 400ms ease-out forwards, pinSoftBlink 3s ease-in-out 2s infinite; }
             .dest-label { opacity: 0; transition: opacity 200ms ease; pointer-events: none; }

@@ -91,9 +91,8 @@ export default function ContactPage() {
                     <select className="input" value={form.subject} onChange={h("subject")} style={errors.subject ? { borderColor: "var(--accent-red)" } : {}}>
                       <option value="">Select a subject</option>
                       <option>General Enquiry</option>
-                      <option>Partnership</option>
-                      <option>Billing Support</option>
-                      <option>Technical Issue</option>
+                      <option>Retailer</option>
+                      <option>Consumer</option>
                       <option>Other</option>
                     </select>
                     {errors.subject && <div style={errStyle}>{errors.subject}</div>}
